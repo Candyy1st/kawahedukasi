@@ -1,0 +1,18 @@
+3. buatlah program query yang sudah di sediakan import query kedalam  db untuk melihat data table 
+
+- buatlah query untuk menampilkan peserta dengan gaji tertinggi
+    SELECT `nama`, MAX(gaji) FROM `kawahedukasi`
+
+
+- buatlah query untuk menampilkan peserta BACKEND dengan nilai tertinggi dan gaji tertinggi
+    SELECT `nama`, MAX(nilai), `status_pekerjaan`, MAX(gaji) FROM `kawahedukasi` WHERE kelas='backend'
+
+
+- buatlah query untuk melihat total peserta yang berada dalam kelas frontend
+    SELECT count(*) FROM `kawahedukasi` WHERE kelas='frontend'
+
+
+- buatlah query untuk menampilkan jumlah kehadiran tertinggi dan nilai tertinggi dalam kelas frontend
+    SELECT `nama`, MAX(nilai), MAX(jumlah_kehadiran) FROM `kawahedukasi` WHERE kelas='frontend'
+
+    

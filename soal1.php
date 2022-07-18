@@ -1,35 +1,32 @@
-<!--    
-    Tugas Soal No 1
-        - buatlah program FizzBuzz dengan looping: 
-        - Jika angka yang keluar adalah angka 5 maka output yang di hasilkan adalah "Fizz"
-        - Jika angka yang keluar adalah angka 11 maka output yang di hasilkan adalah "Buzz"
-        - Jika angka yang keluar adalah 5 dan 11 maka output yang di hasilkan adalah "FizzBuzz" 
--->
-
 <?php
+//     Tugas Soal No 1
+//         - buatlah program FizzBuzz dengan looping: 
+//         - Jika angka yang keluar adalah angka 5 maka output yang di hasilkan adalah "Fizz"
+//         - Jika angka yang keluar adalah angka 11 maka output yang di hasilkan adalah "Buzz"
+//         - Jika angka yang keluar adalah 5 dan 11 maka output yang di hasilkan adalah "FizzBuzz" 
 
-function fizzBuzz($data){
 
-    // Gabungan 5 x 11 = 55, Jadi nanti angka 55,110 dan 165 akan berubah menjadi fizzbuzz
-    if ($data % 55 == 0){
-        echo "FizzBuzz\n";}
+// Menambah Data 55
+    $data = [1, 2, 4, 3, 10, 11, 20, 5, 100, 200, 55];
 
-    // Hanya angka 5
-    elseif ($data % 5 == 0){
-        echo "Fizz\n";}
+    for ( $i=0; $i < count($data); $i++) { 
+        // Gabungan 5x11=55, Jadi data 55 akan berubah menjadi fizzbuzz
+        if (($data[$i] %5 == 0) && ($data[$i] %11 == 0)){
+            echo "FizzBuzz";
+        
+        // Hanya Data 5
+        } elseif ($data[$i] == 5) {
+            echo "Fizz \n";
 
-    // Hanya angka 11
-    elseif ($data % 11 == 0){
-        echo "Buzz\n";}
-
-    // Tidak ketiganya
-    else{
-        echo $data. "\n";}
-}
-
-for($i=1; $i<=200; $i++){
-    fizzBuzz($i);
-}
+        // Hanya Data 11
+        } elseif ($data[$i] == 11) {
+            echo "Buzz \n";
+        
+        // Tidak Ketiganya
+        } else {
+            echo $data[$i] . "\n";
+        }
+    }
 
 ?>
 
